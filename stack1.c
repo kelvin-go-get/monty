@@ -91,20 +91,21 @@ void f_add(stack_t **head, unsigned int count)
 {
 	stack_t *temp1, *temp2;
 
-	if (count < 2)
-	{
+	if (count < 2)/*check if the stack has least 2 elements*/
+	{/*print to stderr an exit*/
 	fprintf(stderr, "L%u : can't add, stack too short\n", count);
 	fclose(var.fd);
 	free(var.cont);
 	free_stack(*head);
 	exit(EXIT_FAILURE);
 	}
-	else
+	else/*retrive the top 2 elements*/
 	{
 	temp1 = *head;
 	temp2 = temp1->next;
-	temp2->n += temp1->n;
-	free(temp1);
+
+	temp2->n += temp1->n;/* add the values of the top two elements*/
+	free(temp1);/*free memort*/
 	*head = temp2;
 	}
 }

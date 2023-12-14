@@ -74,4 +74,8 @@ void addnode(stack_t **head, int n);
 void f_push(stack_t **head, unsigned int count);
 void f_pall(stack_t **head, unsigned int count);
 void f_stack(stack_t **head, unsigned int count);
+/*stack2.c*/
+void f_mul(stack_t **head, unsigned int count);
+void f_div(stack_t **head, unsigned int count);
+void f_sub(stack_t **head, unsigned int count);
 #endif
